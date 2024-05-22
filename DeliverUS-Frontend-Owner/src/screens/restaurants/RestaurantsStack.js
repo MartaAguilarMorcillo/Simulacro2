@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
 import CreateProductScreen from './CreateProductScreen'
 import CreateRestaurantScreen from './CreateRestaurantScreen'
+import CreateRestaurantCategoryScreen from './CreateRestaurantCategoryScreen'
 import EditProductScreen from './EditProductScreen'
 import EditRestaurantScreen from './EditRestaurantScreen'
 import RestaurantDetailScreen from './RestaurantDetailScreen'
@@ -47,6 +48,14 @@ export default function RestaurantsStack () {
         component={EditProductScreen}
         options={{
           title: 'Edit Product'
+        }} />
+        <Stack.Screen
+        // SOLUCIÓN
+        // Cuando pongas un navigate asegurate que la Screen esté en el Stack
+        name='CreateRestaurantCategoryScreen'
+        component={CreateRestaurantCategoryScreen}
+        options={{
+          title: 'Create Restaurant Category'
         }} />
     </Stack.Navigator>
   )
